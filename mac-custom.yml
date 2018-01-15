@@ -105,6 +105,7 @@
     - { cask_app_name: "steam", tags: ["steam","stage_4"], role: danbohea.cask-app }
     - { cask_app_name: "licecap", tags: ["licecap","stage_4"], role: danbohea.cask-app }
     - { cask_app_name: "arduino", tags: ["arduino","stage_4"], role: danbohea.cask-app }
+    - { cask_app_name: "resilio-sync", tags: ["resilio_sync","stage_4"], role: danbohea.cask-app }
 
     # Last
     # --------------------------------------------------------------------------
