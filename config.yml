@@ -28,6 +28,7 @@ atom_packages:
   - language-ignore
   - language-nunjucks
   - language-patch
+  - less-than-slash
   - linter
   - linter-ansible-syntax
   - linter-jsonlint
