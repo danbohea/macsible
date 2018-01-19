@@ -64,7 +64,7 @@
     - { cask_app_name: "xscope", tags: ["xscope","stage_2"], role: danbohea.cask-app }
     - { cask_app_name: "phpstorm", tags: ["phpstorm","stage_2"], role: danbohea.cask-app }
     - { cask_app_name: "slack", tags: ["slack","stage_2"], role: danbohea.cask-app }
-
+    - { cask_app_name: "browserstacklocal", tags: ["browserstacklocal","stage_2"], role: danbohea.cask-app }
 
     # Stage 3: Projects
     # --------------------------------------------------------------------------
