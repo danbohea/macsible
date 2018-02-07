@@ -9,7 +9,7 @@ cd "$DIR"
 cd ../
 
 # Copy and rename files from ./src:
-if [ $TRAVIS_OS_NAME = osx ]; then
+if [ $TRAVIS ]; then
   setStatusMessage "Creating ./config.yml if absent"
   cp src/config.example.yml config.yml
   setStatusMessage "Creating ./config.local.yml if absent"
