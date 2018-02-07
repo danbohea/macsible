@@ -6,4 +6,5 @@ node_pkgs_list:
   - gulp
   - imageoptim-cli
   - tldr
+  - vue-cli
   - yo
