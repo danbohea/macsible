@@ -2,18 +2,15 @@
 
 [![Build Status](https://travis-ci.org/danbohea/macsible.svg?branch=master)](https://travis-ci.org/danbohea/macsible)
 
-
 ### Requirements
 
 Ensure the following requirements are already installed and working on your local system:
 
-- [macOS](https://support.apple.com/en-us/HT201372) 10.11 or 10.12
-- Command Line Developer Tools
+- macOS 10.10, 10.11 or 10.12 ([help](https://support.apple.com/en-us/HT201372)).
+- Command Line Developer Tools ([help](docs/install_command_line_developer_tools.md)).
+- Ansible ([help](docs/install_ansible.md)).
 
-See [here](docs/install_requirements.md) for assistance.
-
-
-## Forking and customisation
+## Forking and customisation overview
 
 1. Fork the repository at [https://github.com/macsible/macsible](https://github.com/macsible/macsible).
 2. Clone the fork to your local system (this is now the repository you will use to store your own customisations).
@@ -21,27 +18,32 @@ See [here](docs/install_requirements.md) for assistance.
 4. Follow the usage instructions below.
 5. Commit and push any customisations to your local clone back upstream to your fork.
 
+You can see a working example of a forked and customised repository at [https://github.com/danbohea/macsible](https://github.com/danbohea/macsible).
 
 ## Usage
 
-*NOTE: All commands below are to be run from the root of this codebase.*
+### Create required additional files
 
-
-### Install dependencies
-
-A script is included to ensure certain dependencies are met:
-
-- Install pip (if not already installed)
-- Install Ansible (if not already installed)
-- Create required files if not present: config.yml, config.local.yml, mac-custom.yml, requirements.yml
-- Download required Ansible Galaxy roles
-
-To execute this script run:
+You'll need to create some additional files in the root of your project. A script has been included to automate this. To use it run:
 
 ```
-bash init.sh
+bash create_fork_files.sh
 ```
 
+This will create the following files based on the examples found in the src directory:
+
+- config.yml
+- config.local.yml
+- mac-custom.yml
+- requirements.yml
+
+### Download externally sourced roles
+
+Remotely sourced Ansible roles can be added to requirements.yml. Before running the playbook you'll need to download any Ansible roles specified in requirements.yml by running the following command:
+
+```
+ansible-galaxy install -r requirements.yml --force
+```
 
 ### Configure
 
@@ -49,26 +51,16 @@ Default variables can be overridden in config.yml.
 
 config.local.yml can be used to override config.yml which can be useful when you need to use different values for just a few variables on a specific system. By default config.local.yml is ignored by git.
 
-
-### Updating externally sourced roles
-
-If you decide to add/edit the roles listed in requirements.yml (highly encouraged!) then you'll need to make sure that those dependencies are in place before running your playbook. After editing requirements.yml you'll want to run the following command before running your playbook:
-
-```
-ansible-galaxy install -r requirements.yml --force
-```
-
-
 ### Run the Ansible playbook
 
-The primary Ansible playbook file is called macsible.yml and can be run using the following command (asks for sudo password):
+The primary Ansible playbook file is called macsible.yml and can be run using the command below (asks for sudo password). Note that running macsible.yml will in turn run your customised mac-custom.yml playbook.
 
 ```
 ansible-playbook macsible.yml -K
 ```
 
-To run only certain tags (e.g. `firefox` and `flux`):
+To run only certain tags (e.g. `firefox` and `dev_apps`):
 
 ```
-ansible-playbook macsible.yml -K -t "firefox,flux"
+ansible-playbook macsible.yml -K -t "firefox,dev_apps"
 ```
