@@ -6,7 +6,7 @@ DIR="$(dirname "$0")"
 
 # Change to project root directory
 cd "$DIR"
-# cd ../
+cd ../
 
 # Copy and rename files from ./src:
 
