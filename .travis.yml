@@ -12,8 +12,7 @@ matrix:
       osx_image: xcode7.3
 
 before_install:
-  - command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
-  - rvm get stable
+  - unset -f cd
 
 install:
   - bash scripts/install_deps.sh
