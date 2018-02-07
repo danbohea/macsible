@@ -8,6 +8,7 @@
 atom_packages:
   - afterglow-monokai-syntax
   - atom-beautify
+  - atom-ide-ui
   - atom-json-color
   - atom-jinja2
   - atom-terminal-tab
@@ -22,12 +23,14 @@ atom_packages:
   - git-time-machine
   - highlight-line
   - highlight-selected
+  - ide-vue
   - isotope-ui
   - language-ansible
   - language-docker
   - language-ignore
   - language-nunjucks
   - language-patch
+  - language-vue
   - less-than-slash
   - linter
   - linter-ansible-syntax
