@@ -23,7 +23,11 @@ atom_packages:
   - git-time-machine
   - highlight-line
   - highlight-selected
+  - ide-css
+  - ide-html
+  - ide-json
   - ide-vue
+  - ide-yaml
   - isotope-ui
   - language-ansible
   - language-docker
