@@ -11,6 +11,7 @@ cd ../
 # Copy and rename files from ./src
 # We're using `rsync` instead of `cp` because for some reason Travis now fails
 # when using `cp -n` (it's the `-n` it doesn't like).
+# https://github.com/travis-ci/travis-ci/issues/6307#issuecomment-363899104
 setStatusMessage "Creating ./config.yml if absent"
 rsync src/config.example.yml config.yml --ignore-existing
 
