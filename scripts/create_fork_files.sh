@@ -11,7 +11,7 @@ cd ../
 # Copy and rename files from ./src:
 
 setStatusMessage "Creating ./config.yml if absent"
-# cp -n src/config.example.yml config.yml
+cp -n src/config.example.yml config.yml
 #
 # setStatusMessage "Creating ./config.local.yml if absent"
 # cp -n src/config.example.yml config.local.yml
