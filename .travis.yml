@@ -12,13 +12,13 @@ matrix:
       osx_image: xcode7.3
 
 install:
-  - unset -f cd
+  - unset -f cd cp
   - bash scripts/install_deps.sh
-  - bash scripts/create_fork_files.sh
-  # - cp -n src/config.example.yml config.yml
-  # - cp -n src/config.example.yml config.local.yml
-  # - cp -n src/mac-custom.example.yml mac-custom.yml
-  # - cp -n src/requirements.example.yml requirements.yml
+  # - bash scripts/create_fork_files.sh
+  - cp -n src/config.example.yml config.yml
+  - cp -n src/config.example.yml config.local.yml
+  - cp -n src/mac-custom.example.yml mac-custom.yml
+  - cp -n src/requirements.example.yml requirements.yml
   - ansible-galaxy install -r requirements.yml --force
 
 script:
