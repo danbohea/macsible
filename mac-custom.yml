@@ -45,13 +45,13 @@
     # Stage 2: Essential dev
     # --------------------------------------------------------------------------
 
-    - { role: bash_completion, tags: ["bash_completion","stage_2"] }
     - { role: vagrant, tags: ["vagrant","stage_2","sudo"] }
     - { role: composer, tags: ["composer","stage_2"] }
     - { role: node_pkgs, tags: ["node_pkgs","stage_2"] }
     - { role: pip_pkgs, tags: ["pip_pkgs","stage_2"] }
     - { role: tower, tags: ["tower","stage_2"] }
     - { role: danbohea.sketch, tags: ["sketch","stage_2","no_ci"] }
+    - { brew_pkg_name: "bash-completion", tags: ["bash_completion","stage_2"], role: brew_pkg }
     - { brew_pkg_name: "python", tags: ["python","stage_2"], role: brew_pkg }
     - { brew_pkg_name: "yarn", tags: ["yarn","stage_2"], role: brew_pkg }
     - { cask_app_name: "virtualbox", tags: ["virtualbox","stage_2"], role: danbohea.cask-app }
