@@ -22,6 +22,7 @@
     - { cask_app_name: "dropbox", tags: ["dropbox","prep"], role: danbohea.cask-app }
     - { cask_app_name: "atext", tags: ["atext","prep"], role: danbohea.cask-app }
     - { cask_app_name: "bettertouchtool", tags: ["bettertouchtool","prep"], role: danbohea.cask-app }
+    - { cask_app_name: "iterm2", tags: ["iterm2","prep"], role: danbohea.cask-app }
 
     # Stage 1: Essential day-to-day
     # --------------------------------------------------------------------------
