@@ -19,6 +19,7 @@ atom_packages:
   - editorconfig
   - emmet
   - file-icons
+  - fix-indent-on-paste
   - git-plus
   - git-time-machine
   - highlight-line
