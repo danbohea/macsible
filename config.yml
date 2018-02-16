@@ -39,6 +39,7 @@ atom_packages:
   - less-than-slash
   - linter-ansible-syntax
   - linter-jsonlint
+  - local-history
   - markdown-writer
   - open-recent
   - open-terminal-here
