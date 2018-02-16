@@ -54,6 +54,7 @@
     - { brew_pkg_name: "bash-completion", tags: ["bash_completion","stage_2"], role: brew_pkg }
     - { brew_pkg_name: "python", tags: ["python","stage_2"], role: brew_pkg }
     - { brew_pkg_name: "yarn", tags: ["yarn","stage_2"], role: brew_pkg }
+    - { brew_pkg_name: "TomAnthony/brews/itermocil", tags: ["itermocil","stage_2"], role: brew_pkg }
     - { cask_app_name: "virtualbox", tags: ["virtualbox","stage_2"], role: danbohea.cask-app }
     - { cask_app_name: "dash", tags: ["dash","stage_2"], role: danbohea.cask-app }
     - { cask_app_name: "kaleidoscope", tags: ["kaleidoscope","stage_2"], role: danbohea.cask-app }
