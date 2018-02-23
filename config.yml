@@ -12,15 +12,16 @@ atom_packages:
   - atom-json-color
   - atom-jinja2
   - atom-terminal-tab
+  - atom-wrap-in-tag
   - autoclose-html
   - autocomplete-paths
   - autocomplete-plus
+  - docblockr
   - double-tag
   - editorconfig
   - emmet
   - file-icons
   - fix-indent-on-paste
-  - git-plus
   - git-time-machine
   - highlight-line
   - highlight-selected
@@ -38,6 +39,7 @@ atom_packages:
   - language-vue
   - less-than-slash
   - linter-ansible-syntax
+  - linter-eslint
   - linter-jsonlint
   - local-history
   - markdown-writer
@@ -50,8 +52,10 @@ atom_packages:
   - svg-preview
   - tabs-to-spaces
   - todo-show
+  - toggle-quotes
   - travis-ci-status
   - tree-view-autoresize
+  - tree-view-copy-relative-path
 
 # dock items
 # ------------------------------------------------------------------------------
