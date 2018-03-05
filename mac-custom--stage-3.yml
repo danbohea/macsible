@@ -8,4 +8,4 @@
 
   roles:
 
-    - { role: projecst, tags: ["projects","stage_3"] }
+    - { role: projects, tags: ["projects","stage_3"] }
