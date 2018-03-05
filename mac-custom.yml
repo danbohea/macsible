@@ -3,7 +3,7 @@
   hosts: all
 
 # Setup that would be beneficial to have in place ASAP.
-- import_playbook: mac--first.yml
+- import_playbook: custom-playbooks/mac--first.yml
   tags: "mac__first"
 
 # Essential day-to-day.
