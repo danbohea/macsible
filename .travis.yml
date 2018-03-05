@@ -22,5 +22,4 @@ script:
   
   # Run Ansible playbook:
   # - Skip tasks/roles that we know cause issues in Travis
-  # - Skip stage 3/4/5 roles as they don't *really* add much to the test
-  - ansible-playbook macsible.yml --skip-tags "no_ci,stage_3,stage_4"
+  - ansible-playbook macsible.yml --skip-tags "no_ci"
