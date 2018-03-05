@@ -2,36 +2,20 @@
 - name: Mac custom
   hosts: all
 
-  vars_files:
-  - config.yml
-  - config.local.yml
-    
-  - import_playbook: mac-custom--prep.yml
-    tags: "prep"
-  
-  - import_playbook: mac-custom--stage-1.yml
-    tags: "stage_1"
-    
-  - import_playbook: mac-custom--stage-2.yml
-    tags: "stage_2"
-  
-  - import_role:
-      name: projects
-    tags: "stage_3"
-    
-  - import_playbook: mac-custom--stage-4.yml
-    tags: "stage_4"
-  
-  - import_role:
-      name: danbohea.dock-items
-    tags: ["dock_items","last","always"]
-    
-  - import_role:
-      name: login_items
-    tags: ["login_items","last","always"]
+- import_playbook: mac-custom--prep.yml
+  tags: "prep"
 
-  post_tasks:
+- import_playbook: mac-custom--stage-1.yml
+  tags: "stage_1"
 
-    - debug:
-        msg: "Some changes may not take effect until you've restarted your Mac."
-      tags: always
+- import_playbook: mac-custom--stage-2.yml
+  tags: "stage_2"
+  
+- import_playbook: mac-custom--stage-3.yml
+  tags: "stage_3"
+    
+- import_playbook: mac-custom--stage-4.yml
+  tags: "stage_4"
+  
+- import_playbook: mac-custom--last.yml
+  tags: "last"

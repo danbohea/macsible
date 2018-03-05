@@ -1,0 +1,18 @@
+---
+- name: Mac custom -- last
+  hosts: all
+
+  vars_files:
+  - config.yml
+  - config.local.yml
+
+  roles:
+
+    - { role: danbohea.dock-items, tags: ["dock_items","last","always"] }
+    - { role: login_items, tags: ["login_items","last","always"] }
+
+  post_tasks:
+  
+    - debug:
+        msg: "Some changes may not take effect until you've restarted your Mac."
+      tags: always

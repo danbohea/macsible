@@ -1,0 +1,11 @@
+---
+- name: Mac custom -- stage 3
+  hosts: all
+
+  vars_files:
+  - config.yml
+  - config.local.yml
+
+  roles:
+
+    - { role: projecst, tags: ["projects","stage_3"] }
