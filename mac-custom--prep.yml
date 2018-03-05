@@ -1,0 +1,25 @@
+---
+- name: Mac custom -- prep
+  hosts: all
+
+  vars_files:
+  - config.yml
+  - config.local.yml
+
+  roles:
+
+    # Prep
+    # --------------------------------------------------------------------------
+    
+    - { role: macos, tags: ["macos","prep"] }
+    - { role: ssh, tags: ["ssh","prep"] }
+    - { role: danbohea.atom, tags: ["atom","prep","no_ci"] }
+    - { role: danbohea.quick-look-plugins, tags: ["quick_look_plugins","prep","no_ci"] }
+    - { role: terminal, tags: ["terminal","prep"] }
+    - { role: danbohea.spelling, tags: ["spelling","prep"] }
+    - { brew_pkg_name: "lastpass-cli", brew_pkg_install_options: "with-pinentry", tags: ["lastpass_cli","prep"], role: brew_pkg }
+    - { cask_app_name: "firefox", tags: ["firefox","prep"], role: danbohea.cask-app }
+    - { cask_app_name: "dropbox", tags: ["dropbox","prep"], role: danbohea.cask-app }
+    - { cask_app_name: "atext", tags: ["atext","prep"], role: danbohea.cask-app }
+    - { cask_app_name: "bettertouchtool", tags: ["bettertouchtool","prep"], role: danbohea.cask-app }
+    - { cask_app_name: "iterm2", tags: ["iterm2","prep"], role: danbohea.cask-app }
