@@ -2,7 +2,7 @@
 - name: Mac custom
   hosts: all
 
-# Set up that would be beneficial to have in place ASAP.
+# Setup that would be beneficial to have in place ASAP.
 - import_playbook: mac-custom--prep.yml
   tags: "prep"
 
@@ -18,10 +18,10 @@
 - import_playbook: mac-custom--stage-3.yml
   tags: "stage_3"
     
-# Remaining set up.
+# Remaining setup.
 - import_playbook: mac-custom--stage-4.yml
   tags: "stage_4"
   
-# Set up that really must be run last.
+# Setup that really must be run last.
 - import_playbook: mac-custom--last.yml
   tags: "last"
