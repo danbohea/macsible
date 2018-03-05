@@ -8,18 +8,18 @@
 
   roles:
     
-    - { role: dotfiles, tags: ["dotfiles","stage_1"] }
-    - { role: duti, tags: ["duti","stage_1"] }
-    - { role: time_machine, tags: ["time_machine","stage_1"] }
-    - { role: moom, tags: ["moom","stage_1"] }
-    - { role: danbohea.flux, tags: ["flux","stage_1","no_ci"] }
-    - { role: evernote, tags: ["evernote","stage_1"] }
-    - { role: path_finder, tags: ["path_finder","stage_1"] }
-    - { role: danbohea.skype, tags: ["skype","stage_1","no_ci"] }
-    - { cask_app_name: "inkdrop", tags: ["inkdrop","stage_1","sudo"], role: danbohea.cask-app }
-    - { cask_app_name: "caffeine", tags: ["caffeine","stage_1","sudo"], role: danbohea.cask-app }
-    - { cask_app_name: "alfred", tags: ["alfred","stage_1","sudo"], role: danbohea.cask-app }
-    - { cask_app_name: "the-unarchiver", tags: ["the_unarchiver","stage_1"], role: danbohea.cask-app }
-    - { cask_app_name: "keyboard-maestro", tags: ["keyboard_maestro","stage_1"], role: danbohea.cask-app }
-    - { cask_app_name: "muzzle", tags: ["muzzle","stage_1"], role: danbohea.cask-app }
-    - { cask_app_name: "nordvpn", tags: ["nordvpn","stage_1"], role: danbohea.cask-app }
+    - { role: dotfiles, tags: "dotfiles" }
+    - { role: duti, tags: "duti" }
+    - { role: time_machine, tags: "time_machine" }
+    - { role: moom, tags: "moom" }
+    - { role: danbohea.flux, tags: ["flux","no_ci"] }
+    - { role: evernote, tags: "evernote" }
+    - { role: path_finder, tags: "path_finder" }
+    - { role: danbohea.skype, tags: ["skype","no_ci"] }
+    - { cask_app_name: "inkdrop", tags: "inkdrop", role: danbohea.cask-app }
+    - { cask_app_name: "caffeine", tags: ["caffeine","sudo"], role: danbohea.cask-app }
+    - { cask_app_name: "alfred", tags: ["alfred","sudo"], role: danbohea.cask-app }
+    - { cask_app_name: "the-unarchiver", tags: "the_unarchiver", role: danbohea.cask-app }
+    - { cask_app_name: "keyboard-maestro", tags: "keyboard_maestro", role: danbohea.cask-app }
+    - { cask_app_name: "muzzle", tags: "muzzle", role: danbohea.cask-app }
+    - { cask_app_name: "nordvpn", tags: "nordvpn", role: danbohea.cask-app }

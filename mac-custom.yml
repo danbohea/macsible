@@ -8,11 +8,11 @@
 
 # Essential day-to-day.
 - import_playbook: mac-custom--stage-1.yml
-  tags: ["stage_1", "no_ci"]
+  tags: "stage_1"
 
 # Essential dev.
 - import_playbook: mac-custom--stage-2.yml
-  tags: ["stage_2", "no_ci"]
+  tags: "stage_2"
   
 # Project work.
 - import_playbook: mac-custom--stage-3.yml
@@ -24,4 +24,4 @@
   
 # Setup that really must be run last.
 - import_playbook: mac-custom--last.yml
-  tags: "last"
+  tags: ["last", "always"]
