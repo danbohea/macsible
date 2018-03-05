@@ -4,6 +4,8 @@
 
 os: osx
 
+cache: pip
+
 matrix:
   include:
     # macOS 10.13
