@@ -7,9 +7,6 @@
   - config.local.yml
 
   roles:
-
-    # Prep
-    # --------------------------------------------------------------------------
     
     - { role: macos, tags: ["macos","prep"] }
     - { role: ssh, tags: ["ssh","prep"] }

@@ -1,110 +1,34 @@
 ---
-- name: Mac setup
+- name: Mac custom
   hosts: all
 
   vars_files:
   - config.yml
   - config.local.yml
-
-  roles:
-
-    # Prep
-    # --------------------------------------------------------------------------
     
-    - import_playbook: mac-custom--prep.yml
-      tags: "tag-test"
-
-    # Stage 1: Essential day-to-day
-    # --------------------------------------------------------------------------
-
-    - { role: dotfiles, tags: ["dotfiles","stage_1"] }
-    - { role: duti, tags: ["duti","stage_1"] }
-    - { role: time_machine, tags: ["time_machine","stage_1"] }
-    - { role: moom, tags: ["moom","stage_1"] }
-    - { role: danbohea.flux, tags: ["flux","stage_1","no_ci"] }
-    - { role: evernote, tags: ["evernote","stage_1"] }
-    - { role: path_finder, tags: ["path_finder","stage_1"] }
-    - { role: danbohea.skype, tags: ["skype","stage_1","no_ci"] }
-    - { cask_app_name: "inkdrop", tags: ["inkdrop","stage_1","sudo"], role: danbohea.cask-app }
-    - { cask_app_name: "caffeine", tags: ["caffeine","stage_1","sudo"], role: danbohea.cask-app }
-    - { cask_app_name: "alfred", tags: ["alfred","stage_1","sudo"], role: danbohea.cask-app }
-    - { cask_app_name: "the-unarchiver", tags: ["the_unarchiver","stage_1"], role: danbohea.cask-app }
-    - { cask_app_name: "keyboard-maestro", tags: ["keyboard_maestro","stage_1"], role: danbohea.cask-app }
-    - { cask_app_name: "muzzle", tags: ["muzzle","stage_1"], role: danbohea.cask-app }
-    - { cask_app_name: "nordvpn", tags: ["nordvpn","stage_1"], role: danbohea.cask-app }
-
-    # Stage 2: Essential dev
-    # --------------------------------------------------------------------------
-
-    - { role: vagrant, tags: ["vagrant","stage_2","sudo"] }
-    - { role: composer, tags: ["composer","stage_2"] }
-    - { role: node_pkgs, tags: ["node_pkgs","stage_2"] }
-    - { role: pip_pkgs, tags: ["pip_pkgs","stage_2"] }
-    - { role: tower, tags: ["tower","stage_2"] }
-    - { role: danbohea.sketch, tags: ["sketch","stage_2","no_ci"] }
-    - { brew_pkg_name: "bash-completion", tags: ["bash_completion","stage_2"], role: brew_pkg }
-    - { brew_pkg_name: "python", tags: ["python","stage_2"], role: brew_pkg }
-    - { brew_pkg_name: "yarn", tags: ["yarn","stage_2"], role: brew_pkg }
-    - { brew_pkg_name: "TomAnthony/brews/itermocil", tags: ["itermocil","stage_2"], role: brew_pkg }
-    # TODO: Failing builds.
-    # - { cask_app_name: "virtualbox", tags: ["virtualbox","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "dash", tags: ["dash","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "kaleidoscope", tags: ["kaleidoscope","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "sequel-pro", tags: ["sequel_pro","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "transmit", tags: ["transmit","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "imageoptim", tags: ["imageoptim","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "xscope", tags: ["xscope","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "slack", tags: ["slack","stage_2"], role: danbohea.cask-app }
-    - { cask_app_name: "browserstacklocal", tags: ["browserstacklocal","stage_2"], role: danbohea.cask-app }
-
-    # Stage 3: Projects
-    # --------------------------------------------------------------------------
-
-    - { role: projects, tags: ["projects","stage_3"] }
-
-    # Stage 4: Remaining apps.
-    # CI can skip these. This makes for faster tests & keeps Travis log
-    # verbosity to a minimum.
-    # --------------------------------------------------------------------------
-
-    - { role: danbohea.google-chrome, tags: ["google_chrome","stage_4"] }
-    - { role: transmission, tags: ["transmission","stage_4"] }
-    - { brew_pkg_name: "tree", tags: ["tree","stage_4"], role: brew_pkg }
-    - { brew_pkg_name: "wget", tags: ["wget","stage_4"], role: brew_pkg }
-    - { brew_pkg_name: "ssh-copy-id", tags: ["ssh-copy-id","stage_4"], role: brew_pkg }
-    - { cask_app_name: "toggldesktop", tags: ["toggldesktop","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "docker", tags: ["docker","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "kitematic", tags: ["kitematic","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "android-platform-tools", tags: ["android_platform_tools","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "istat-menus", role: danbohea.cask-app, tags: ["istat_menus","stage_4","no_ci"] }
-    - { cask_app_name: "opera", tags: ["opera","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "opera-mobile-emulator", tags: ["opera_mobile_emulator","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "adobe-creative-cloud", tags: ["adobe_creative_cloud","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "malwarebytes", tags: ["malwarebytes","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "hazel", tags: ["hazel","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "cakebrew", tags: ["cakebrew","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "limechat", tags: ["limechat","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "daisydisk", tags: ["daisydisk","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "flash-player", tags: ["flash_player","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "name-mangler", tags: ["name_mangler","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "skitch", tags: ["skitch","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "vlc", tags: ["vlc","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "google-backup-and-sync", role: danbohea.cask-app, tags: ["google_backup_and_sync","stage_4"] }
-    - { cask_app_name: "sketchup", role: danbohea.cask-app, tags: ["sketchup","stage_4"] }
-    - { cask_app_name: "bartender", role: danbohea.cask-app, tags: ["bartender","stage_4"] }
-    - { cask_app_name: "doxie", tags: ["doxie","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "omnigraffle", tags: ["omnigraffle","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "appcleaner", tags: ["appcleaner","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "steam", tags: ["steam","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "licecap", tags: ["licecap","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "arduino", tags: ["arduino","stage_4"], role: danbohea.cask-app }
-    - { cask_app_name: "resilio-sync", tags: ["resilio_sync","stage_4"], role: danbohea.cask-app }
-
-    # Last
-    # --------------------------------------------------------------------------
-
-    - { role: danbohea.dock-items, tags: ["dock_items","last","always"] }
-    - { role: login_items, tags: ["login_items","last","always"] }
+  - import_playbook: mac-custom--prep.yml
+    tags: "prep"
+  
+  - import_playbook: mac-custom--stage-1.yml
+    tags: "stage_1"
+    
+  - import_playbook: mac-custom--stage-2.yml
+    tags: "stage_2"
+  
+  - import_role:
+      name: projects
+    tags: "stage_3"
+    
+  - import_playbook: mac-custom--stage-4.yml
+    tags: "stage_4"
+  
+  - import_role:
+      name: danbohea.dock-items
+    tags: ["dock_items","last","always"]
+    
+  - import_role:
+      name: login_items
+    tags: ["login_items","last","always"]
 
   post_tasks:
 
