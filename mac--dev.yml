@@ -1,5 +1,5 @@
 ---
-- name: Mac custom -- stage 2
+- name: Mac - dev
   hosts: all
 
   vars_files:

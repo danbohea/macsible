@@ -1,5 +1,5 @@
 ---
-- name: Mac custom -- stage 3
+- name: Mac - projects
   hosts: all
 
   vars_files:

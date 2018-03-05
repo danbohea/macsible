@@ -1,5 +1,5 @@
 ---
-- name: Mac custom -- stage 4
+- name: Mac - remaining
   hosts: all
 
   vars_files:

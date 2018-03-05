@@ -1,5 +1,5 @@
 ---
-- name: Mac custom -- stage 1
+- name: Mac - Day to day
   hosts: all
 
   vars_files:

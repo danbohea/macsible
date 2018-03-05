@@ -3,25 +3,25 @@
   hosts: all
 
 # Setup that would be beneficial to have in place ASAP.
-- import_playbook: mac-custom--prep.yml
-  tags: "prep"
+- import_playbook: mac--first.yml
+  tags: "mac__first"
 
 # Essential day-to-day.
-- import_playbook: mac-custom--stage-1.yml
-  tags: "stage_1"
+- import_playbook: mac--day-to-day.yml
+  tags: "mac__day_to_day"
 
 # Essential dev.
-- import_playbook: mac-custom--stage-2.yml
-  tags: "stage_2"
+- import_playbook: mac--dev.yml
+  tags: "mac__dev"
   
 # Project work.
-- import_playbook: mac-custom--stage-3.yml
-  tags: ["stage_3", "no_ci"]
+- import_playbook: mac--projects.yml
+  tags: ["mac__projects", "no_ci"]
     
 # Remaining setup.
-- import_playbook: mac-custom--stage-4.yml
-  tags: ["stage_4", "no_ci"]
+- import_playbook: mac--remaining.yml
+  tags: ["mac__remaining", "no_ci"]
   
 # Setup that really must be run last.
-- import_playbook: mac-custom--last.yml
-  tags: ["last", "always"]
+- import_playbook: mac--last.yml
+  tags: ["always"]
