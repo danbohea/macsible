@@ -7,7 +7,7 @@
   - config.local.yml
 
   roles:
-
+    
     - { role: dotfiles, tags: ["dotfiles","stage_1"] }
     - { role: duti, tags: ["duti","stage_1"] }
     - { role: time_machine, tags: ["time_machine","stage_1"] }
