@@ -3,11 +3,11 @@
   hosts: all
 
   vars_files:
-  - ../config.yml
-  - ../config.local.yml
+  - config.yml
+  - config.local.yml
 
   roles:
-    
+
     - { role: dotfiles, tags: "dotfiles" }
     - { role: duti, tags: "duti" }
     - { role: time_machine, tags: "time_machine" }

@@ -3,11 +3,11 @@
   hosts: all
 
   vars_files:
-  - ../config.yml
-  - ../config.local.yml
+  - config.yml
+  - config.local.yml
 
   roles:
-    
+
     - { role: macos, tags: "macos" }
     - { role: ssh, tags: "ssh" }
     - { role: danbohea.atom, tags: ["atom","no_ci"] }

@@ -3,8 +3,8 @@
   hosts: all
 
   vars_files:
-  - ../config.yml
-  - ../config.local.yml
+  - config.yml
+  - config.local.yml
 
   roles:
 
@@ -12,7 +12,7 @@
     - { role: login_items, tags: "login_items" }
 
   post_tasks:
-  
+
     - debug:
         msg: "Some changes may not take effect until you've restarted your Mac."
       tags: always
