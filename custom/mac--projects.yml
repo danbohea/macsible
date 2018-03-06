@@ -1,5 +1,5 @@
 ---
-- name: Mac - projects
+- name: Custom - Projects
   hosts: all
 
   vars_files:

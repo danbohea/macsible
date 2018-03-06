@@ -1,5 +1,5 @@
 ---
-- name: Mac - remaining
+- name: Custom - Remaining
   hosts: all
 
   vars_files:

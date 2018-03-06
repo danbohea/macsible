@@ -1,5 +1,5 @@
 ---
-- name: Mac - Day to day
+- name: Custom - Day to day
   hosts: all
 
   vars_files:

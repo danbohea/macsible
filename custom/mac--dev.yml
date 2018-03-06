@@ -1,5 +1,5 @@
 ---
-- name: Mac - dev
+- name: Custom - Dev
   hosts: all
 
   vars_files:
