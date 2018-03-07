@@ -8,7 +8,7 @@
 
   roles:
 
-    - { role: danbohea.dock-items, tags: "dock_items" }
+    - { role: danbohea.macos-dock, tags: "macos-dock" }
     - { role: login_items, tags: "login_items" }
 
   post_tasks:
