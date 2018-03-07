@@ -18,5 +18,5 @@
   version: master
 - src: danbohea.skype
   version: master
-- src: danbohea.spelling
-  version: master
+- src: danbohea.macos-spelling
+  version: 1.0.0
