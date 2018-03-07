@@ -61,7 +61,7 @@ atom_packages:
 # ------------------------------------------------------------------------------
 
 # Filenames must include .app extension.
-dock_apps:
+macos_dock_apps:
   - Path Finder.app
   - Dash.app
   - Skype.app
