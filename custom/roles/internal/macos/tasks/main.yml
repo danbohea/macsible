@@ -9,7 +9,6 @@
 # - https://github.com/ansible/ansible/pull/19899
 
 - import_tasks: activity_monitor.yml
-- import_tasks: dock.yml
 - import_tasks: finder.yml
 - import_tasks: general_ui_ux.yml
 - import_tasks: mission_control.yml
