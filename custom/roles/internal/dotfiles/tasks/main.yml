@@ -1,6 +1,6 @@
 ---
 
-- name: Clone dotfiles repo to {{ dotfiles_dir }}
+- name: Clone dotfiles repo
   git:
     repo: "{{ dotfiles_repo_https }}"
     dest: "{{ dotfiles_dir }}"

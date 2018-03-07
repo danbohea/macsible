@@ -4,7 +4,8 @@
   homebrew_cask: name=tower state=present
   notify: brew cask cleanup
 
-- name: Use Homebrew Git binary
+# Use Homebrew git binary
+- name: Set default Git binary
   osx_defaults:
     domain: com.fournova.Tower2
     key: GTUserDefaultsGitBinary
