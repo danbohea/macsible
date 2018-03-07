@@ -22,16 +22,16 @@
   notify:
     - killall Path Finder
 
-- name: Set Terminal.app as the default terminal
+- name: Set the default terminal app
   osx_defaults:
     domain: com.cocoatech.PathFinder
     key: kTerminalApplicationPath
     type: string
-    value: "/Applications/Utilities/Terminal.app"
+    value: "/Applications/iTerm.app"
   notify:
     - killall Path Finder
 
-- name: Set Atom.app as the default text editor
+- name: Set the default text editor app
   osx_defaults:
     domain: com.cocoatech.PathFinder
     key: textEditorApplicationPath
