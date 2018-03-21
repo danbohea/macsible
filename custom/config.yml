@@ -45,6 +45,7 @@ atom_packages:
   - local-history
   - markdown-writer
   - minimap
+  - minimap-linter
   - open-recent
   - open-terminal-here
   - php-twig
