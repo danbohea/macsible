@@ -40,9 +40,11 @@ atom_packages:
   - less-than-slash
   - linter-ansible-syntax
   - linter-eslint
+  - linter-htmlhint
   - linter-jsonlint
   - local-history
   - markdown-writer
+  - minimap
   - open-recent
   - open-terminal-here
   - php-twig
