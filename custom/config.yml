@@ -12,6 +12,7 @@ atom_packages:
   - atom-json-color
   - atom-jinja2
   - atom-terminal-tab
+  - atom-twig
   - atom-wrap-in-tag
   - autoclose-html
   - autocomplete-paths
@@ -48,7 +49,6 @@ atom_packages:
   - minimap-linter
   - open-recent
   - open-terminal-here
-  - php-twig
   - pigments
   - project-manager
   - sort-lines
