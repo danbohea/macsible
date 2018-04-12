@@ -34,7 +34,6 @@
     - { cask_app_name: "sketchup", role: danbohea.cask-app, tags: "sketchup" }
     - { cask_app_name: "bartender", role: danbohea.cask-app, tags: "bartender" }
     - { cask_app_name: "doxie", tags: "doxie", role: danbohea.cask-app }
-    - { cask_app_name: "omnigraffle", tags: "omnigraffle", role: danbohea.cask-app }
     - { cask_app_name: "appcleaner", tags: "appcleaner", role: danbohea.cask-app }
     - { cask_app_name: "steam", tags: "steam", role: danbohea.cask-app }
     - { cask_app_name: "licecap", tags: "licecap", role: danbohea.cask-app }
