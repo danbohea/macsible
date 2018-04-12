@@ -28,3 +28,4 @@
     - { cask_app_name: "xscope", tags: "xscope", role: danbohea.cask-app }
     - { cask_app_name: "slack", tags: "slack", role: danbohea.cask-app }
     - { cask_app_name: "browserstacklocal", tags: "browserstacklocal", role: danbohea.cask-app }
+    - { cask_app_name: "gitkraken", tags: "gitkraken", role: danbohea.cask-app }
