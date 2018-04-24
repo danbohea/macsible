@@ -75,6 +75,7 @@ macos_dock_apps:
   - Skitch.app
   - Calendar.app
   - Atom.app
+  - PhpStorm.app
   - Todoist.app
   - System Preferences.app
   - xScope.app
