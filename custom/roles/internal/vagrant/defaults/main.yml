@@ -4,5 +4,4 @@ vagrant_plugins:
   - vagrant-auto_network
   - vagrant-cachier
   - vagrant-hostsupdater
-  - vagrant-triggers
   - vagrant-vbguest
