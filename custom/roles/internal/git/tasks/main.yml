@@ -4,8 +4,7 @@
   homebrew: name=git
   notify: brew cleanup
 
-# Get Git current config
-# ------------------------------------------------------------------------------
+## Get Git current config
 
 - name: Get current Git push.default
   command: git config --global --get push.default
@@ -25,8 +24,7 @@
   changed_when: false
   ignore_errors: yes
 
-# Set Git config if required
-# ------------------------------------------------------------------------------
+## Set Git config if required
 
 - name: Configure push.default
   command: git config --global push.default "{{ git_push_default }}"
