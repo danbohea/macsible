@@ -17,6 +17,7 @@
     - { brew_pkg_name: "lastpass-cli", brew_pkg_install_options: "with-pinentry", tags: "lastpass_cli", role: brew_pkg }
     - { cask_app_name: "firefox", tags: "firefox", role: danbohea.cask-app }
     - { cask_app_name: "dropbox", tags: "dropbox", role: danbohea.cask-app }
-    - { cask_app_name: "atext", tags: "atext", role: danbohea.cask-app }
+    # TODO: Currently fails on install.
+    # - { cask_app_name: "atext", tags: "atext", role: danbohea.cask-app }
     - { cask_app_name: "bettertouchtool", tags: "bettertouchtool", role: danbohea.cask-app }
     - { cask_app_name: "iterm2", tags: "iterm2", role: danbohea.cask-app }
