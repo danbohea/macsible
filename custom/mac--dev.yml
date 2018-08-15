@@ -22,7 +22,8 @@
     # TODO: Failing builds.
     # - { cask_app_name: "virtualbox", tags: "virtualbox", role: danbohea.cask-app }
     - { cask_app_name: "dash", tags: "dash", role: danbohea.cask-app }
-    - { cask_app_name: "kaleidoscope", tags: "kaleidoscope", role: danbohea.cask-app }
+    # TODO: Currently fails on install.
+    # - { cask_app_name: "kaleidoscope", tags: "kaleidoscope", role: danbohea.cask-app }
     - { cask_app_name: "sequel-pro", tags: "sequel_pro", role: danbohea.cask-app }
     - { cask_app_name: "transmit", tags: "transmit", role: danbohea.cask-app }
     - { cask_app_name: "imageoptim", tags: "imageoptim", role: danbohea.cask-app }
