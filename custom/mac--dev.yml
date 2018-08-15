@@ -10,6 +10,7 @@
 
     - { role: vagrant, tags: ["vagrant","sudo"] }
     - { role: composer, tags: "composer" }
+    # TODO Handle global node pakcages through nvm role.
     - { role: node_pkgs, tags: "node_pkgs" }
     - { role: pip_pkgs, tags: "pip_pkgs" }
     - { role: tower, tags: "tower" }
