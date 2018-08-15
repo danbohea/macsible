@@ -18,6 +18,7 @@
     - { brew_pkg_name: "nvm", tags: "nvm", role: brew_pkg }
     - { brew_pkg_name: "python", tags: "python", role: brew_pkg }
     - { brew_pkg_name: "yarn", tags: "yarn", role: brew_pkg }
+    # TODO: Install this via its own role along with config.
     - { brew_pkg_name: "TomAnthony/brews/itermocil", tags: "itermocil", role: brew_pkg }
     # TODO: Failing builds.
     # - { cask_app_name: "virtualbox", tags: "virtualbox", role: danbohea.cask-app }
