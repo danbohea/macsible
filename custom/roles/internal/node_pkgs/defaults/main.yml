@@ -2,6 +2,7 @@
 
 node_pkgs_list:
   - bower
+  - git-version-bumper
   - grunt-cli
   - gulp
   - imageoptim-cli
