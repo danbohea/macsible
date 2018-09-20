@@ -39,3 +39,4 @@
     - { cask_app_name: "licecap", tags: "licecap", role: danbohea.cask-app }
     - { cask_app_name: "arduino", tags: "arduino", role: danbohea.cask-app }
     - { cask_app_name: "resilio-sync", tags: "resilio_sync", role: danbohea.cask-app }
+    - { cask_app_name: "gifox", tags: "gifox", role: danbohea.cask-app }
