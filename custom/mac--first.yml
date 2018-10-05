@@ -14,6 +14,7 @@
     - { role: danbohea.quick-look-plugins, tags: ["quick_look_plugins","no_ci"] }
     - { role: terminal, tags: "terminal" }
     - { role: danbohea.macos-spelling, tags: "spelling" }
+    - { cask_app_name: "bitwarden", tags: "bitwarden", role: danbohea.cask-app }
     - { cask_app_name: "firefox", tags: "firefox", role: danbohea.cask-app }
     - { cask_app_name: "dropbox", tags: "dropbox", role: danbohea.cask-app }
     # TODO: Currently fails on install.
