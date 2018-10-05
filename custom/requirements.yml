@@ -3,7 +3,7 @@
 - src: danbohea.atom
   version: master
 - src: danbohea.cask-app
-  version: 1.0.1
+  version: 1.0.2
 - src: danbohea.flux
   version: master
 - src: danbohea.google-chrome
