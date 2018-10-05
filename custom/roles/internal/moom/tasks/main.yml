@@ -2,7 +2,7 @@
 
 - name: Install Moom
   homebrew_cask: name=moom state=present
-  notify: brew cask cleanup
+  notify: brew cleanup
 
 - name: Set preferences (int)
   osx_defaults:

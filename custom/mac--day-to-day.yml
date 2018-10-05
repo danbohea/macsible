@@ -22,5 +22,6 @@
     # TODO: Failing builds.
     # - { cask_app_name: "the-unarchiver", tags: "the_unarchiver", role: danbohea.cask-app }
     - { cask_app_name: "keyboard-maestro", tags: "keyboard_maestro", role: danbohea.cask-app }
-    - { cask_app_name: "muzzle", tags: "muzzle", role: danbohea.cask-app }
+    # TODO: Failing builds.
+    # - { cask_app_name: "muzzle", tags: "muzzle", role: danbohea.cask-app }
     - { cask_app_name: "nordvpn", tags: "nordvpn", role: danbohea.cask-app }

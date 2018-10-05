@@ -2,7 +2,7 @@
 
 - name: Install Vagrant
   homebrew_cask: name=vagrant state=present
-  notify: brew cask cleanup
+  notify: brew cleanup
 
 - name: Ensure ~/.ssh/ exists
   file:
