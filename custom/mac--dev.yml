@@ -21,6 +21,7 @@
     - { brew_pkg_name: "yarn", brew_pkg_install_options: "without-node", tags: "yarn", role: brew_pkg }
     # TODO: Install this via its own role along with config.
     - { brew_pkg_name: "TomAnthony/brews/itermocil", tags: "itermocil", role: brew_pkg }
+    - { cask_app_name: "figma", tags: "figma", role: danbohea.cask-app }
     # TODO: Failing builds.
     # - { cask_app_name: "virtualbox", tags: "virtualbox", role: danbohea.cask-app }
     - { cask_app_name: "dash", tags: "dash", role: danbohea.cask-app }
