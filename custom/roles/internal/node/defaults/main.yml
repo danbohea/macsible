@@ -1,11 +1,6 @@
----
-
-node_pkgs_list:
+node_global_pkgs:
   - bower
   - git-version-bumper
   - grunt-cli
-  - gulp
+  - gulp-cli
   - imageoptim-cli
-  - tldr
-  - vue-cli
-  - yo
