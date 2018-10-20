@@ -1,7 +1,5 @@
 ---
 
-# TODO: Make default node version a variable.
-
 # https://github.com/creationix/nvm
 
 - name: Clone nvm project.
@@ -14,16 +12,16 @@
   shell: "bash {{ ansible_user_dir }}/.nvm/install.sh"
 
 - name: Install and set default node version.
-  shell: ". {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install 8.11.3 && nvm alias default 8.11.3"
+  shell: ". {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install {{ node_default_version }} && nvm alias default {{ node_default_version }}"
   args:
-    creates: "{{ ansible_env.HOME }}/.nvm/versions/node/v8.11.3"
+    creates: "{{ ansible_env.HOME }}/.nvm/versions/node/v{{ node_default_version }}"
     executable: /bin/bash
 
 - name: Install global npm packages.
   npm:
     name: "{{ item }}"
     global: yes
-    executable: "{{ ansible_env.HOME }}/.nvm/versions/node/v8.11.3/bin/npm"
+    executable: "{{ ansible_env.HOME }}/.nvm/versions/node/v{{ node_default_version }}/bin/npm"
   loop: "{{ node_global_pkgs }}"
 
 # Tip: List global packages with `npm list -g --depth=0`
