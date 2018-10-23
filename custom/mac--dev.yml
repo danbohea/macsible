@@ -10,14 +10,13 @@
 
     - { role: vagrant, tags: ["vagrant","sudo"] }
     - { role: composer, tags: "composer" }
-    # TODO Handle global node pakcages through nvm role.
-    - { role: node_pkgs, tags: "node_pkgs" }
+    - { role: node, tags: "node" }
     - { role: pip_pkgs, tags: "pip_pkgs" }
     - { role: tower, tags: "tower" }
     - { role: danbohea.sketch, tags: ["sketch","no_ci"] }
     - { brew_pkg_name: "bash-completion", tags: "bash_completion", role: brew_pkg }
-    - { brew_pkg_name: "nvm", tags: "nvm", role: brew_pkg }
     - { brew_pkg_name: "python", tags: "python", role: brew_pkg }
+    # TODO: Yarn should depend on the node role really. 
     - { brew_pkg_name: "yarn", brew_pkg_install_options: "without-node", tags: "yarn", role: brew_pkg }
     # TODO: Install this via its own role along with config.
     - { brew_pkg_name: "TomAnthony/brews/itermocil", tags: "itermocil", role: brew_pkg }
