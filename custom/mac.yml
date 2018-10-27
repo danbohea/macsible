@@ -1,6 +1,6 @@
 ---
 - name: Custom - Mac
-  hosts: all
+  hosts: localhost
 
 # Setup that would be beneficial to have in place ASAP.
 - import_playbook: mac--first.yml

@@ -1,6 +1,6 @@
 ---
 - name: Custom - First
-  hosts: all
+  hosts: localhost
 
   vars_files:
     - config.yml

@@ -1,6 +1,6 @@
 ---
 - name: Custom - Day to day
-  hosts: all
+  hosts: localhost
 
   vars_files:
     - config.yml
@@ -25,3 +25,4 @@
     # TODO: Failing builds.
     # - { cask_app_name: "muzzle", tags: "muzzle", role: danbohea.cask-app }
     - { cask_app_name: "nordvpn", tags: "nordvpn", role: danbohea.cask-app }
+   

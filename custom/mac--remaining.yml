@@ -1,6 +1,6 @@
 ---
 - name: Custom - Remaining
-  hosts: all
+  hosts: localhost
 
   vars_files:
     - config.yml

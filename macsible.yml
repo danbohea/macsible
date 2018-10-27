@@ -3,7 +3,7 @@
 # Do not customise this file.
 
 - name: Macsible
-  hosts: all
+  hosts: localhost
 
   pre_tasks:
 
