@@ -66,8 +66,6 @@ atom_packages:
 # Filenames must include .app extension.
 macos_dock_apps:
   - Path Finder.app
-  - Dash.app
-  - Skype.app
   - Slack.app
   - Firefox.app
   - Inkdrop.app
@@ -80,9 +78,6 @@ macos_dock_apps:
   - System Preferences.app
   - xScope.app
   - Tower.app
-  - Transmit.app
-  - Sequel Pro.app
-  - VirtualBox.app
   - Terminal.app
 
 # sketch
