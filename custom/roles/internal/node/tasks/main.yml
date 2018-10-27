@@ -8,16 +8,22 @@
     dest: "{{ ansible_user_dir }}/.nvm"
     version: v0.33.11
 
+# TODO: Make idempotent.
 - name: Install nvm.
   shell: "bash {{ ansible_user_dir }}/.nvm/install.sh"
 
 # TODO: Add support for nvm aliases e.g. "node" & "lts/*".
 
-# TODO: Break this into 2 separate tasks.
-- name: Install and set default node version.
-  shell: ". {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install {{ node_default_version }} && nvm alias default {{ node_default_version }}"
+- name: Install default node version.
+  shell: ". {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install {{ node_default_version }}"
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/versions/node/v{{ node_default_version }}"
+    executable: /bin/bash
+
+# TODO: Make idempotent.
+- name: Set default node version.
+  shell: ". {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm alias default {{ node_default_version }}"
+  args:
     executable: /bin/bash
 
 # TODO: Support installing default global packages from file
@@ -28,6 +34,7 @@
     name: "{{ item }}"
     global: yes
     executable: "{{ ansible_env.HOME }}/.nvm/versions/node/v{{ node_default_version }}/bin/npm"
-  loop: "{{ node_global_pkgs }}"
+  # TODO: Was using `loop` but got errors.
+  with_items: "{{ node_global_pkgs }}"
 
 # Tip: List global packages with `npm list -g --depth=0`
