@@ -34,7 +34,7 @@
     name: "{{ item }}"
     global: yes
     executable: "{{ ansible_env.HOME }}/.nvm/versions/node/v{{ node_default_version }}/bin/npm"
-  # TODO: Was using `loop` but got errors.
+  # TODO: Was using `loop` but got errors when run on local system. Probably not running a new enough version of Ansible.
   with_items: "{{ node_global_pkgs }}"
 
 # Tip: List global packages with `npm list -g --depth=0`
