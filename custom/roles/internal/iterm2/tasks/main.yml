@@ -9,6 +9,7 @@
     name: TomAnthony/brews/itermocil
   notify: brew cleanup
 
+# TODO: [WARNING]: Cannot set fs attributes on a non-existent symlink target. `follow` should be set to False to avoid this.
 - name: Symlink ~/.itermocil to source of itermocil config YAML files.
   file:
     path: ~/.itermocil
