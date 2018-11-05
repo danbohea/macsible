@@ -38,3 +38,12 @@
   with_items: "{{ node_global_pkgs }}"
 
 # Tip: List global packages with `npm list -g --depth=0`
+
+# Yarn docs recommend installing without Node.js if using nvm hence why we're
+# using the `without-node` option below.
+# https://yarnpkg.com/en/docs/install#mac-stable
+- name: Install Yarn.
+  homebrew:
+    name: yarn
+    install_options: without-node
+  notify: brew cleanup
