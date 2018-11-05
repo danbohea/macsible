@@ -1,0 +1,17 @@
+---
+
+- name: Install iTerm2.
+  homebrew_cask: name=iterm2 state=present
+  notify: brew cleanup
+
+- name: Install itermocil.
+  homebrew:
+    name: TomAnthony/brews/itermocil
+  notify: brew cleanup
+
+- name: Symlink ~/.itermocil to source of itermocil config YAML files.
+  file:
+    path: ~/.itermocil
+    src: ~/Dropbox/itermocil
+    state: link
+    force: yes

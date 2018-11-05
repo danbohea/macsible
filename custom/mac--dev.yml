@@ -16,8 +16,6 @@
     - { role: danbohea.sketch, tags: ["sketch","no_ci"] }
     - { brew_pkg_name: "bash-completion", tags: "bash_completion", role: brew_pkg }
     - { brew_pkg_name: "python", tags: "python", role: brew_pkg }
-    # TODO: Install this via its own role along with config.
-    - { brew_pkg_name: "TomAnthony/brews/itermocil", tags: "itermocil", role: brew_pkg }
     - { brew_pkg_name: "asciinema", tags: "asciinema", role: brew_pkg }
     - { cask_app_name: "figma", tags: "figma", role: danbohea.cask-app }
     # TODO: Failing builds.
