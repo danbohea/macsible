@@ -58,7 +58,11 @@
   notify:
     - killall Path Finder
 
-# TODO: Ensure ~/Projects exists here.
+- name: Ensure ~/Projects directory exists
+  file:
+    path: ~/Projects
+    state: directory
+    follow: yes
 
 - name: "Set starting directory to ~/Projects"
   osx_defaults:
