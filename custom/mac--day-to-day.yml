@@ -12,7 +12,6 @@
     - { role: duti, tags: "duti" }
     - { role: time_machine, tags: "time_machine" }
     - { role: moom, tags: "moom" }
-    - { role: danbohea.flux, tags: ["flux","no_ci"] }
     - { role: evernote, tags: "evernote" }
     - { role: path_finder, tags: "path_finder" }
     - { role: danbohea.skype, tags: ["skype","no_ci"] }
