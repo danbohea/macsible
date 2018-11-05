@@ -9,13 +9,6 @@
     path: ~/.ssh
     state: directory
 
-# TODO: Apparently this isn't required in later versions of Vagrant. Check.
-- name: SSH config for local Vagrant development
-  blockinfile:
-    dest: ~/.ssh/config
-    content: "Host *.local\n  ForwardAgent yes"
-    create: yes
-
 # - name: Check for installed Vagrant plugins
 #   command: vagrant plugin list
 #   register: vagrant_plugin_list_results
