@@ -1,9 +1,6 @@
 ---
 
-# TODO: [DEPRECATION WARNING]: Invoking "pip" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: {{ item }}`, please use `name: u'{{ pip_pkgs_list }}'` and remove the loop. This feature will be removed in version 2.11.
-
 - name: Install pip packages
   pip:
-    name: "{{ item }}"
+    name: u'{{ pip_pkgs_list }}'
     extra_args: "--user"
-  with_items: "{{ pip_pkgs_list }}"
