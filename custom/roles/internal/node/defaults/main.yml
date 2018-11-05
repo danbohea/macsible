@@ -8,3 +8,5 @@ node_global_pkgs:
   - grunt-cli
   - gulp-cli
   - imageoptim-cli
+
+node_install_yarn: true
