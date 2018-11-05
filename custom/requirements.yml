@@ -11,7 +11,7 @@
 - src: danbohea.homebrew
   version: 2.0.0
 - src: danbohea.macos-dock
-  version: 1.0.0
+  version: 2.0.0
 - src: danbohea.quick-look-plugins
   version: master
 - src: danbohea.sketch

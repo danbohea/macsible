@@ -65,20 +65,20 @@ atom_packages:
 
 # Filenames must include .app extension.
 macos_dock_apps:
-  - Path Finder.app
-  - Slack.app
-  - Firefox.app
-  - Inkdrop.app
-  - Evernote.app
-  - Skitch.app
-  - Calendar.app
-  - Atom.app
-  - PhpStorm.app
-  - Todoist.app
-  - System Preferences.app
-  - xScope.app
-  - Tower.app
-  - Terminal.app
+  - /Applications/Path Finder.app
+  - /Applications/Slack.app
+  - /Applications/Firefox.app
+  - /Applications/Inkdrop.app
+  - /Applications/Evernote.app
+  - /Applications/Skitch.app
+  - /Applications/Calendar.app
+  - /Applications/Atom.app
+  - /Applications/PhpStorm.app
+  - /Applications/Todoist.app
+  - /Applications/System Preferences.app
+  - /Applications/xScope.app
+  - /Applications/Tower.app
+  - /Applications/iTerm.app
 
 # sketch
 # ------------------------------------------------------------------------------

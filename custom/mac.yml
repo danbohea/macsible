@@ -24,4 +24,4 @@
 
 # Setup that really must be run last.
 - import_playbook: mac--last.yml
-  tags: ["always"]
+  tags: ["mac__last", "always"]
