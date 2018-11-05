@@ -1,7 +1,7 @@
 ---
 
 - src: danbohea.atom
-  version: master
+  version: 1.0.1
 - src: danbohea.cask-app
   version: 2.0.0
 - src: danbohea.google-chrome
