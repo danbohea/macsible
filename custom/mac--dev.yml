@@ -13,7 +13,6 @@
     - { role: node, tags: "node" }
     - { role: pip_pkgs, tags: "pip_pkgs" }
     - { role: tower, tags: "tower" }
-    - { role: danbohea.sketch, tags: ["sketch","no_ci"] }
     - { brew_pkg_name: "bash-completion", tags: "bash_completion", role: brew_pkg }
     - { brew_pkg_name: "python", tags: "python", role: brew_pkg }
     - { brew_pkg_name: "asciinema", tags: "asciinema", role: brew_pkg }

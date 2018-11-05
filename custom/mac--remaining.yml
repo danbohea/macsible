@@ -10,6 +10,7 @@
 
     - { role: danbohea.google-chrome, tags: "google_chrome" }
     - { role: transmission, tags: "transmission" }
+    - { role: danbohea.sketch, tags: ["sketch"] }
     - { brew_pkg_name: "tree", tags: "tree", role: brew_pkg }
     - { brew_pkg_name: "wget", tags: "wget", role: brew_pkg }
     - { brew_pkg_name: "ssh-copy-id", tags: "ssh-copy-id", role: brew_pkg }
