@@ -106,14 +106,15 @@
   notify:
     - killall
 
-- name: Reduce transparency
-  osx_defaults:
-    domain: com.apple.universalaccess
-    key: reduceTransparency
-    type: bool
-    value: true
-  notify:
-    - killall
+# TODO: Fails in macOS 10.14
+# - name: Reduce transparency
+#   osx_defaults:
+#     domain: com.apple.universalaccess
+#     key: reduceTransparency
+#     type: bool
+#     value: true
+#   notify:
+#     - killall
 
 - name: Set interface style to Dark
   osx_defaults:
