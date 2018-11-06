@@ -24,10 +24,6 @@
     force: yes
   with_items: "{{ dotfiles_to_symlink.stdout_lines }}"
 
-- name: Reload .bash_profile
-  shell: . ~/.bash_profile
-  changed_when: false
-
 # TODO: Make idempotent
 - name: Set git remote URL to SSH
   shell: git remote set-url origin {{ dotfiles_repo_ssh }}
