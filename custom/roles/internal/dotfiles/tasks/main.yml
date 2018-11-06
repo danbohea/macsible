@@ -25,7 +25,7 @@
   with_items: "{{ dotfiles_to_symlink.stdout_lines }}"
 
 - name: Reload .bash_profile
-  shell: source ~/.bash_profile
+  shell: . ~/.bash_profile
   changed_when: false
 
 # TODO: Make idempotent
