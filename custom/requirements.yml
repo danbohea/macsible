@@ -10,8 +10,6 @@
   version: 2.0.0
 - src: danbohea.macos-dock
   version: 2.0.0
-- src: danbohea.quick-look-plugins
-  version: master
 - src: danbohea.sketch
   version: master
 - src: danbohea.skype
